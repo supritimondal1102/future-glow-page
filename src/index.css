@@ -257,4 +257,31 @@ All colors MUST be HSL.
       transform: translateY(0);
     }
   }
+  
+  /* Text shimmer animation */
+  @keyframes text-shimmer {
+    0% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .animate-text-shimmer {
+    animation: text-shimmer 3s ease-in-out infinite;
+  }
+  
+  /* Typing animation */
+  @keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink {
+    50% { border-color: transparent; }
+  }
+  
+  .typing-animation {
+    overflow: hidden;
+    border-right: 2px solid hsl(var(--primary));
+    white-space: nowrap;
+    animation: typing 2s steps(20, end), blink 1s step-end infinite;
+  }
 }

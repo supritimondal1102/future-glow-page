@@ -38,8 +38,8 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center glow-primary">
-              <Zap className="w-5 h-5 text-white" />
+            <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center glow-primary hover:animate-pulse">
+              <Zap className="w-5 h-5 text-white hover:text-neon-cyan transition-colors" />
             </div>
             <span className="text-xl font-bold text-gradient-primary">FutureFlow</span>
           </div>

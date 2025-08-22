@@ -76,7 +76,7 @@ export function PricingSection() {
         {/* Section header */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 glass-card px-4 py-2 rounded-full mb-6">
-            <Star className="w-4 h-4 text-neon-cyan" />
+            <Star className="w-4 h-4 text-neon-cyan animate-spin" />
             <span className="text-sm font-medium">Simple Pricing</span>
           </div>
           
@@ -140,9 +140,9 @@ export function PricingSection() {
 
               {/* Plan icon */}
               <div className={`w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center mb-6 ${
-                plan.popular ? 'glow-primary' : ''
-              }`}>
-                <plan.icon className="w-8 h-8 text-white" />
+                plan.popular ? 'glow-primary animate-pulse' : 'hover:glow-primary'
+              } transition-all duration-300`}>
+                <plan.icon className={`w-8 h-8 text-white ${plan.popular ? 'animate-bounce' : 'hover:scale-110'} transition-transform duration-300`} />
               </div>
 
               {/* Plan details */}
@@ -168,8 +168,8 @@ export function PricingSection() {
               <div className="space-y-4 mb-8">
                 {plan.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-start space-x-3">
-                    <div className="w-5 h-5 rounded-full bg-neon-cyan/20 flex items-center justify-center mt-0.5">
-                      <Check className="w-3 h-3 text-neon-cyan" />
+                    <div className="w-5 h-5 rounded-full bg-neon-cyan/20 flex items-center justify-center mt-0.5 hover:bg-neon-cyan/40 transition-colors">
+                      <Check className="w-3 h-3 text-neon-cyan hover:scale-110 transition-transform" />
                     </div>
                     <span className="text-foreground text-sm">{feature}</span>
                   </div>

@@ -72,7 +72,7 @@ export function FeaturesSection() {
         {/* Section header */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 glass-card px-4 py-2 rounded-full mb-6">
-            <Cpu className="w-4 h-4 text-neon-cyan" />
+            <Cpu className="w-4 h-4 text-neon-cyan animate-pulse" />
             <span className="text-sm font-medium">Advanced Features</span>
           </div>
           
@@ -98,8 +98,8 @@ export function FeaturesSection() {
               onClick={() => setExpandedFeature(expandedFeature === index ? null : index)}
             >
               {/* Icon */}
-              <div className={`w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center mb-6 glow-primary group-hover:glow-${feature.color}`}>
-                <feature.icon className="w-8 h-8 text-white" />
+              <div className={`w-16 h-16 rounded-2xl bg-gradient-primary flex items-center justify-center mb-6 glow-primary group-hover:glow-${feature.color} transition-all duration-300`}>
+                <feature.icon className={`w-8 h-8 text-white group-hover:scale-110 transition-transform duration-300 ${feature.color === 'neon-cyan' ? 'group-hover:text-neon-cyan' : feature.color === 'neon-purple' ? 'group-hover:text-neon-purple' : feature.color === 'neon-blue' ? 'group-hover:text-neon-blue' : 'group-hover:text-neon-pink'}`} />
               </div>
 
               {/* Content */}
@@ -127,7 +127,7 @@ export function FeaturesSection() {
 
               {/* Hover indicator */}
               <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                <div className="w-2 h-2 bg-neon-cyan rounded-full animate-pulse" />
+                <div className="w-2 h-2 bg-neon-cyan rounded-full animate-pulse glow-cyan" />
               </div>
             </div>
           ))}

@@ -94,7 +94,7 @@ export function TestimonialsSection() {
         {/* Section header */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 glass-card px-4 py-2 rounded-full mb-6">
-            <Quote className="w-4 h-4 text-neon-cyan" />
+            <Quote className="w-4 h-4 text-neon-cyan animate-pulse" />
             <span className="text-sm font-medium">Customer Stories</span>
           </div>
           
@@ -113,8 +113,8 @@ export function TestimonialsSection() {
         <div className="relative max-w-4xl mx-auto mb-16">
           <div className="glass-card p-8 md:p-12 rounded-3xl relative overflow-hidden group">
             {/* Quote icon */}
-            <div className="absolute top-8 left-8 w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center opacity-20">
-              <Quote className="w-8 h-8 text-white" />
+            <div className="absolute top-8 left-8 w-16 h-16 bg-gradient-primary rounded-2xl flex items-center justify-center opacity-20 group-hover:opacity-40 transition-opacity">
+              <Quote className="w-8 h-8 text-white group-hover:text-neon-cyan transition-colors" />
             </div>
 
             {/* Testimonial content */}
@@ -122,7 +122,7 @@ export function TestimonialsSection() {
               {/* Stars */}
               <div className="flex items-center space-x-1 mb-6">
                 {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-neon-cyan text-neon-cyan" />
+                  <Star key={i} className="w-5 h-5 fill-neon-cyan text-neon-cyan hover:fill-neon-purple hover:text-neon-purple transition-colors animate-pulse" style={{ animationDelay: `${i * 0.1}s` }} />
                 ))}
               </div>
 
@@ -162,9 +162,9 @@ export function TestimonialsSection() {
                 variant="glass"
                 size="icon"
                 onClick={prevTestimonial}
-                className="hover:scale-110"
+                className="hover:scale-110 group"
               >
-                <ChevronLeft className="w-5 h-5" />
+                <ChevronLeft className="w-5 h-5 text-muted-foreground group-hover:text-neon-cyan transition-colors" />
               </Button>
 
               {/* Dots indicator */}
@@ -189,9 +189,9 @@ export function TestimonialsSection() {
                 variant="glass"
                 size="icon"
                 onClick={nextTestimonial}
-                className="hover:scale-110"
+                className="hover:scale-110 group"
               >
-                <ChevronRight className="w-5 h-5" />
+                <ChevronRight className="w-5 h-5 text-muted-foreground group-hover:text-neon-cyan transition-colors" />
               </Button>
             </div>
           </div>

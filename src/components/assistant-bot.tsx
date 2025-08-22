@@ -78,12 +78,12 @@ export function AssistantBot() {
           onClick={() => setIsOpen(!isOpen)}
           variant="neon"
           size="icon"
-          className="w-16 h-16 rounded-full shadow-2xl hover:scale-110 pulse-glow"
+          className="w-16 h-16 rounded-full shadow-2xl hover:scale-110 pulse-glow group"
         >
           {isOpen ? (
-            <X className="w-6 h-6" />
+            <X className="w-6 h-6 text-white group-hover:text-neon-pink transition-colors" />
           ) : (
-            <Bot className="w-6 h-6" />
+            <Bot className="w-6 h-6 text-white group-hover:text-neon-cyan transition-colors animate-pulse" />
           )}
         </Button>
       </div>
@@ -96,7 +96,7 @@ export function AssistantBot() {
             <div className="bg-gradient-primary p-4">
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
-                  <Sparkles className="w-5 h-5 text-white" />
+                  <Sparkles className="w-5 h-5 text-white animate-spin hover:text-neon-cyan transition-colors" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-white">AI Assistant</h3>
@@ -159,8 +159,9 @@ export function AssistantBot() {
                   variant="neon"
                   size="icon"
                   disabled={!inputValue.trim()}
+                  className="group"
                 >
-                  <Send className="w-4 h-4" />
+                  <Send className="w-4 h-4 text-white group-hover:text-neon-cyan transition-colors" />
                 </Button>
               </div>
             </div>

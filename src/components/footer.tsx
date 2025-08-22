@@ -43,9 +43,9 @@ const footerLinks = {
 }
 
 const socialLinks = [
-  { name: "Twitter", icon: Twitter, href: "#", color: "hover:text-blue-400" },
-  { name: "LinkedIn", icon: Linkedin, href: "#", color: "hover:text-blue-600" },
-  { name: "GitHub", icon: Github, href: "#", color: "hover:text-gray-300" }
+  { name: "Twitter", icon: Twitter, href: "#", color: "hover:text-neon-cyan" },
+  { name: "LinkedIn", icon: Linkedin, href: "#", color: "hover:text-neon-blue" },
+  { name: "GitHub", icon: Github, href: "#", color: "hover:text-neon-purple" }
 ]
 
 export function Footer() {
@@ -88,8 +88,8 @@ export function Footer() {
             {/* Brand section */}
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-2 mb-6">
-                <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-                  <Zap className="w-5 h-5 text-white" />
+                <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center glow-primary">
+                  <Zap className="w-5 h-5 text-white hover:text-neon-cyan transition-colors" />
                 </div>
                 <span className="text-xl font-bold text-gradient-primary">FutureFlow</span>
               </div>
@@ -102,15 +102,15 @@ export function Footer() {
               {/* Contact info */}
               <div className="space-y-3 mb-6">
                 <div className="flex items-center space-x-3 text-sm">
-                  <Mail className="w-4 h-4 text-neon-cyan" />
+                  <Mail className="w-4 h-4 text-neon-cyan hover:text-neon-purple transition-colors" />
                   <span className="text-muted-foreground">hello@futureflow.com</span>
                 </div>
                 <div className="flex items-center space-x-3 text-sm">
-                  <Phone className="w-4 h-4 text-neon-cyan" />
+                  <Phone className="w-4 h-4 text-neon-blue hover:text-neon-cyan transition-colors" />
                   <span className="text-muted-foreground">+1 (555) 123-4567</span>
                 </div>
                 <div className="flex items-center space-x-3 text-sm">
-                  <MapPin className="w-4 h-4 text-neon-cyan" />
+                  <MapPin className="w-4 h-4 text-neon-pink hover:text-neon-purple transition-colors" />
                   <span className="text-muted-foreground">San Francisco, CA</span>
                 </div>
               </div>
@@ -205,7 +205,7 @@ export function Footer() {
             
             <div className="flex items-center space-x-1 text-sm text-muted-foreground mt-4 md:mt-0">
               <span>Made with</span>
-              <Heart className="w-4 h-4 text-red-500 fill-current" />
+              <Heart className="w-4 h-4 text-neon-pink fill-current animate-pulse hover:scale-110 transition-transform" />
               <span>by the FutureFlow team</span>
             </div>
           </div>

@@ -13,18 +13,18 @@ export function HeroSection() {
       </div>
 
       <div className="relative z-10 text-center max-w-6xl mx-auto">
-        {/* Badge */}
-        <div className="inline-flex items-center space-x-2 glass-card px-4 py-2 rounded-full mb-8 slide-up">
-          <Sparkles className="w-4 h-4 text-neon-cyan" />
+        {/* Animated Badge */}
+        <div className="inline-flex items-center space-x-2 glass-card px-4 py-2 rounded-full mb-8 slide-up animate-bounce hover:animate-none cursor-pointer group">
+          <Sparkles className="w-4 h-4 text-neon-cyan animate-pulse group-hover:animate-spin" />
           <span className="text-sm font-medium">Introducing the Future of Web</span>
           <div className="w-2 h-2 bg-neon-cyan rounded-full animate-pulse" />
         </div>
 
-        {/* Main headline */}
+        {/* Main headline with animations */}
         <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold mb-8 slide-up">
-          <span className="text-gradient-primary">Revolutionary</span>
+          <span className="text-gradient-primary animate-text-shimmer bg-gradient-to-r from-primary via-neon-cyan to-neon-purple bg-[length:400%_100%] bg-clip-text text-transparent">Revolutionary</span>
           <br />
-          <span className="text-foreground">Digital Experience</span>
+          <span className="text-foreground typing-animation">Digital Experience</span>
         </h1>
 
         {/* Subheadline */}
@@ -38,11 +38,11 @@ export function HeroSection() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 slide-up">
           <Button variant="hero" size="hero" className="group">
             Get Started Free
-            <ArrowRight className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-6 h-6 ml-2 group-hover:translate-x-1 transition-transform text-white" />
           </Button>
           
           <Button variant="outline-neon" size="hero" className="group">
-            <Play className="w-6 h-6 mr-2" />
+            <Play className="w-6 h-6 mr-2 text-neon-cyan group-hover:text-white transition-colors" />
             Watch Demo
           </Button>
         </div>
